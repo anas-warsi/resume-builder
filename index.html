@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered CV/Resume Builder</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="script" href="assets/js/script.js">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <a href="login.php">Login</a>
+        <a href="login.php">About</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>AI-Powered CV/Resume Builder</h1>
+        <p>Create professional resumes in seconds with AI-powered suggestions.</p>
+        <button class="btn" id="create-resume">
+         Create Resume <i class="fa fa-arrow-right"></i>
+        </button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa fa-bolt"></i>
+            <h3>Fast Resume Creation</h3>
+            <p>Generate professional resumes in just a few clicks.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa fa-robot"></i>
+            <h3>AI-Powered Suggestions</h3>
+            <p>Get smart career objective and skill suggestions automatically.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa fa-file-alt"></i>
+            <h3>Multiple Templates</h3>
+            <p>Choose from multiple modern and clean resume designs.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa fa-download"></i>
+            <h3>Download as PDF</h3>
+            <p>Download your resume in PDF format for easy sharing.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI-Powered CV/Resume Builder | All rights reserved</p>
+    </footer>
+
+</body>
+<script>
+    let isLoggedIn = false; // simulate user login status
+
+    const createBtn = document.getElementById('create-resume');
+
+    createBtn.addEventListener('click', () => {
+        if(!isLoggedIn){
+            alert('Please login first!');  // <-- alert
+            window.location.href = 'login.php'; // redirect to login page
+        } else {
+            window.location.href = 'form.html'; // dashboard / resume form
+        }
+    });
+</script>
+</html>

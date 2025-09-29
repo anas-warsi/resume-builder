@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Center Form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glass Card */
+.form-card {
+    backdrop-filter: blur(20px);
+    background: transparent;
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 350px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* Forms */
+form {
+    display: none;
+    flex-direction: column;
+}
+
+form.active {
+    display: flex;
+}
+
+form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.3);
+    color: #333;
+}
+
+form input::placeholder {
+    color: rgba(0,0,0,0.7);
+}
+
+form button {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(80, 2, 102);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: rgb(48, 3, 60);
+}
+
+/* Toggle text */
+.toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.toggle-text span {
+    color: rgb(163, 4, 4);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle-text span:hover {
+    text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width: 400px) {
+    .form-card {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
