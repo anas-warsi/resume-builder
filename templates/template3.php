@@ -58,15 +58,6 @@ if (isset($_GET['download']) && $_GET['download'] === 'pdf') {
     if(!empty($resume['link'])) $pdf->Cell(0,7, $resume['link'],0,1,'C');
     $pdf->Ln(5);
     
-    // Career Objective
-    if(!empty($resume['career_objective'])){
-        $pdf->SetFont('Arial','B',14);
-        $pdf->SetFillColor(200,200,200);
-        $pdf->Cell(0,8,'Career Objective',0,1,'L',true);
-        $pdf->SetFont('Arial','',12);
-        $pdf->MultiCell(0,6,$resume['career_objective']);
-        $pdf->Ln(3);
-    }
     // If career_objective is empty, generate it automatically
     if (empty($resume['career_objective'])) {
         $resume['career_objective'] = generateCareerObjective(
@@ -75,6 +66,15 @@ if (isset($_GET['download']) && $_GET['download'] === 'pdf') {
             $skills, 
             "Software Developer" // default role
         );
+    }
+    // Career Objective
+    if(!empty($resume['career_objective'])){
+        $pdf->SetFont('Arial','B',14);
+        $pdf->SetFillColor(200,200,200);
+        $pdf->Cell(0,8,'Career Objective',0,1,'L',true);
+        $pdf->SetFont('Arial','',12);
+        $pdf->MultiCell(0,6,$resume['career_objective']);
+        $pdf->Ln(3);
     }
     
     // Experience
