@@ -384,7 +384,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Top Navigation -->
     <div class="topnav">
-        <a href="index.html">Dashboard</a>
+        <a href="dashboard.php">Dashboard</a>
         <a href="about.php">About</a>
     </div>
 
